@@ -100,21 +100,17 @@ Dicas:
   - `plt.show()`
 """
 
-data = pd.to_datetime(dict(year=df["ano"], month=df["mes"], day=1))
-df = df.assign(Data=data)
-df = df.sort_values('Data')
-st.dataframe(df)
+projetos = ["Projeto1", "Projeto2", "Projeto3", "Projeto4", "Projeto5"]
 
 fig, ax = plt.subplots()
 plt.figure(figsize=(10,6))
-plt.plot(df['Data'], df['Projeto1'], label='Projeto 1', ax=ax)
-plt.plot(df['Data'], df['Projeto2'], label='Projeto 2', ax=ax)
-plt.plot(df['Data'], df['Projeto3'], label='Projeto 3', ax=ax)
-plt.plot(df['Data'], df['Projeto4'], label='Projeto 4', ax=ax)
-plt.plot(df['Data'], df['Projeto5'], label='Projeto 5', ax=ax)
-plt.xlabel('Tempo')
-plt.ylabel('Valor')
-plt.title('Evolução dos Valores dos Projetos ao Longo do Tempo')
-plt.legend()
+for projeto in projetos:
+    plt.plot(df["Data"], df[projeto], marker="o", label=projeto, ax=ax)
+
+plt.title("Evolução dos Fluxos de Caixa dos Projetos")
+plt.xlabel("Tempo (Ano-Mês)")
+plt.ylabel("Valor (R$)")
+plt.legend(title="Projetos")
 plt.grid(True)
+plt.tight_layout()
 st.pyplot(fig)
