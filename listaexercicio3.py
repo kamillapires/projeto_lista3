@@ -115,7 +115,7 @@ for projeto in projetos:
 ax.set_title("Evolução dos Projetos")
 ax.set_label("Tempo (Ano-Mês)")
 ax.set_ylabel("Valor (R$)")
-ax.set_legend(title="Projetos")
+ax.legend(title="Projetos")
 ax.set_grid(True)
 ax.set_tight_layout()
 st.pyplot(fig)
