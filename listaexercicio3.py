@@ -100,6 +100,11 @@ Dicas:
   - `plt.show()`
 """
 
+df["Data"] = pd.to_datetime(dict(year=df["ano"], month=df["mes"], day=1))
+
+df = df.sort_values("Data")
+st.dataframe(df)
+
 projetos = ["Projeto1", "Projeto2", "Projeto3", "Projeto4", "Projeto5"]
 
 fig, ax = plt.subplots()
