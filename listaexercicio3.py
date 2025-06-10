@@ -29,8 +29,8 @@ st.subheader("Lista de Exercício 3")
 
 import pandas as pd
 
-arquivo = "/content/projetos.csv"
-df = pd.read_csv("/content/projetos.csv", sep=";")
+arquivo = "https://raw.githubusercontent.com/kamillapires/projeto_lista3/refs/heads/main/projetos.csv"
+df = pd.read_csv("https://raw.githubusercontent.com/kamillapires/projeto_lista3/refs/heads/main/projetos.csv", sep=";")
 pd.options.display.max_rows = 999
 st.dataframe(df)
 
