@@ -52,7 +52,8 @@ st.dataframe(df)
 
 """3) Apresente a soma dos valores de cada projeto agrupado por ano. (Peso: 1,0)"""
 
-df.groupby('ano')[['Projeto1', 'Projeto2', 'Projeto3', 'Projeto4', 'Projeto5']].sum()
+colunas = ['Projeto1', 'Projeto2', 'Projeto3', 'Projeto4', 'Projeto5']
+st.dataframe(df.groupby('ano')[colunas].sum())
 
 """4) Deseja-se calcular o Valor Presente (VP) de cada projeto, considerando uma taxa de juros mensal constante de 2%. Para isto, crie uma função `valor_presente(fluxos, taxa)` e depois aplique a função para calcular o VP de todos os projetos. (Peso: 2,0)
 
