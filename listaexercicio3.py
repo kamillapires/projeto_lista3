@@ -107,7 +107,7 @@ st.dataframe(df)
 
 projetos = ["Projeto1", "Projeto2", "Projeto3", "Projeto4", "Projeto5"]
 
-fig, ax = plt.subplots(10, 6)
+fig, ax = plt.subplots((10, 6))
 
 for projeto in projetos:
     ax.plot(df["Data"], df[projeto], marker="o", label=projeto)
