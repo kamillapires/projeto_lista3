@@ -18,9 +18,6 @@ Os dados do arquivo `projetos.csv` se referem aos valores futuros previstos para
 1) Nesta etapa, faça o carregamento dos dados e apresente a df completa. (Peso: 1,0)
 """
 
-!pip install pandas
-!pip install streamlit
-
 import streamlit as st
 
 st.set_page_config(
